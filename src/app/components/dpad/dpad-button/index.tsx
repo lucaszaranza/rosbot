@@ -5,7 +5,7 @@ export default function DPadButton(props: { direction: string }) {
     <div>
       <button>
         <Image
-          className="dark:invert hover:scale-110"
+          className="dark:invert hover:scale-110 aspect-square"
           src={`/dpad/${props.direction}.png`}
           alt={props.direction}
           width={40}
@@ -15,5 +15,4 @@ export default function DPadButton(props: { direction: string }) {
       </button>
     </div>
   )
-
 }

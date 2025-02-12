@@ -1,5 +1,5 @@
 import Image from "next/image";
-import DPadButton from "./dpad-button/dpad-button";
+import DPadButton from "./dpad-button"; 
 
 export default function DPad() {
   return (
