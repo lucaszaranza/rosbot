@@ -10,7 +10,8 @@ export default function RobotInfo() {
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
-      url: "ws://localhost:9090",
+      // url: "ws://10.42.0.1:9090"   // for HotSpot connection,
+      url: "ws://192.168.2.246:9090", // for web connection
     });
 
     ros.on("connection", () => console.log("Conectado ao ROS!"));
