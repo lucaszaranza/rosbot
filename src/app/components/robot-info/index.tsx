@@ -36,7 +36,7 @@ export default function RobotInfo() {
       const tempMessage = message as Float32Message;
       setTemperature(tempMessage.data);
     });
-    
+
     return () => {
       // batteryTopic.unsubscribe();
       tempTopic.unsubscribe();
@@ -45,25 +45,27 @@ export default function RobotInfo() {
   }, []);
 
   return (
-    <div style={{ padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
+    <div
+      style={{ padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}
+    >
       <ol className="flex flex-col list-inside list-decimal text-sm items-center text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
         <h2>:: Informações do Robô ::</h2>
-        <br/>
-          {/* <li className="mb-2">
+        <br />
+        {/* <li className="mb-2">
             Bateria:
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
               {robotBattery}%
             </code>
             .
           </li> */}
-          <li className="mb-2">
-            Temperatura:
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              {temperature}°C
-            </code>
-            .
-          </li>
-        </ol>
+        <li className="mb-2">
+          Temperatura:
+          <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
+            {temperature}°C
+          </code>
+          .
+        </li>
+      </ol>
     </div>
   );
 }
